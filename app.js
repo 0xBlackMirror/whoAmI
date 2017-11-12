@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 // Page GET Request For whoAmI
 app.get('/api/whoAmI', (req, res) => {
     // Taking user info
-    let ipaddress = req.ips;
+    let ipaddress = req.header('x-forwarded-for') || req.connection.remoteAddress;
     let languages = req.acceptsLanguages();
     let software = req.useragent.os;
     // Outputting the info
