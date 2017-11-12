@@ -20,6 +20,6 @@ app.get('/api/whoAmI', (req, res) => {
 });
 
 // Server Run
-app.listen(80, () => {
+app.listen(proccess.env.PORT||80, () => {
     console.log('Server Is Running.');
 });
