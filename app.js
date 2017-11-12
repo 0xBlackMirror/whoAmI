@@ -21,7 +21,7 @@ app.get('/api/whoAmI', (req, res) => {
     let languages = req.acceptsLanguages();
     let software = req.useragent.os;
     // Outputting the info
-    res.json({"ipaddress": ipaddress[0], "language": languages[0], "software": software});
+    res.json({"ipaddress": ipaddress, "language": languages[0], "software": software});
 });
 
 // Server Run
